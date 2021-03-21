@@ -1,0 +1,98 @@
+<!--使用HTML5开发-->
+<!doctype html>
+<html class="no-js">
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <!--自动适应移动屏幕-->
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+        <!--优先使用webkit内核渲染-->
+        <meta name="renderer" content="webkit">
+        <!--不要被百度转码-->
+        <meta http-equiv="Cache-Control" content="no-siteapp"/>
+        <!--以下才是引入amazeui资源-->
+        <link rel="stylesheet" href="assets/css/amazeui.min.css">
+        <link rel="stylesheet" href="assets/css/app.css">
+        <!--引入js的时候要注意，必须先引入jQuery，再引入amazeui，因为这个框架是基于jQuery开发的-->
+        <script src="assets/js/jquery.min.js"></script>
+        <script src="assets/js/amazeui.min.js"></script>
+        <title>折叠式布局下的内容列表、表格</title>
+    </head> 
+    <body>
+        <h1>折叠式卡片布局</h1>
+        <div data-am-widget="accordion" class="am-accordion am-accordion-gapped">
+            <!--这里是表示标题的背景颜色是灰色-->
+            <dl class="am-accordion-item am-active">
+                <dt class="am-accordion-title">卡片1-文字</dt>
+                <!--这里表示这个面板默认是打开状态-->
+                <dd class="am-accordion-bd am-collapse am-in">
+                    <div class="am-accordion-content">
+                    <!--内容在这里写-->
+                    纯属文字
+                    </div>
+                </dd>
+            </dl>
+            <dl class="am-accordion-item">
+                <dt class="am-accordion-title">卡片2-内容列表</dt>
+                <dd class="am-accordion-bd am-collapse">
+                    <!--如果这个折叠式布局里面用到的不是纯属的文件，必须加上一个margin-bottom:-20px削去底部的空白-->
+                    <!--用到内容列表的话，无须加class="am-accordion-content"属性-->
+                    <div style="margin-bottom:-20px">
+                        <div class="am-list-news-bd">
+                        <ul class="am-list">
+                            <li class=" am-list-item-dated">
+                                <a href="##" class="am-list-item-hd">标题1</a>
+                                <span class="am-list-date">2015-05-12</span>
+                            </li>
+                            <li class=" am-list-item-dated">
+                                <a href="##" class="am-list-item-hd">超长超长超长超长超长超长超长超长超长超长超长超长超长超长超长超长超长超长标题2</a>
+                                <span class="am-list-date">2015-05-12</span>
+                            </li>
+                            <li class=" am-list-item-dated">
+                                <a href="##" class="am-list-item-hd">标题3</a>
+                                <span class="am-list-date">2015-05-12</span>
+                            </li>   
+                        </ul>
+                        </div>
+                    </div>
+                </dd>
+            </dl>
+            <dl class="am-accordion-item">
+                <dt class="am-accordion-title">卡片3-表格</dt>
+                <dd class="am-accordion-bd am-collapse ">
+                    <!--am-table-bordered代表表格列与列之间有线划分，am-table-striped代表表格灰白相间-->
+                    <div class="am-accordion-content" style="margin-bottom:-20px">
+                        <table class="am-table am-table-radius am-table-striped">
+                            <thead>
+                                <tr>
+                                    <!--这里与HTML一样，必须设置好每一行的表格宽度-->
+                                    <th width="33%">表头1</th>
+                                    <th width="33%">表头2</th>
+                                    <th>表头3</th>
+                                </tr>
+                             </thead>
+                             <tbody>
+                                <tr>
+                                    <td>内容1</td>
+                                    <td>超长超长超长内容2</td>
+                                    <td>内容3</td>
+                                </tr>
+                                <tr>
+                                    <td>内容1</td>
+                                    <td>超长超长超长超长超长超长超长超长超长超长超长超长超长超长超长超长超长超长内容2</td>
+                                    <td>内容3</td>
+                                </tr>
+                                <tr>
+                                    <td>内容1</td>
+                                    <td>超长超长超长内容2</td>
+                                    <td>内容3</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </dd>
+            </dl>
+        </div>
+    </body>
+</html>

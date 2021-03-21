@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    
+    <title>BeFriends</title>
+
+    <script src="https://cdn.staticfile.org/jquery/1.12.4/jquery.min.js"></script>
+	<script type="text/javascript" src="js/index-js.js"></script>
+	<script type="text/javascript" src="js/search.js"></script>
+	<link rel="stylesheet" href="css/index_cs.css">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta http-equiv="pragma" content="no-cache">
+    <meta http-equiv="cache-control" content="no-cache">
+    <meta http-equiv="expires" content="0">
+    <meta http-equiv="keywords" content="keyword1,keyword2,keyword3">
+</head>
+
+<body>
+	<div class="container">
+		<div class="search-box" id="search">
+			<label id="judgeS" style="display: none;">0</label>
+				<form role="search" method="get" action="#" onsubmit="return false;">
+					<span class="search-addon close-search"><i class="fa fa-times"></i></span>
+					<div class="search-input">
+						<input type="search" class="form-control" placeholder="Search here" name="keyword" id="searchIn">
+						<label>
+							<svg t="1608214591433" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="13744" width="16" height="16"><path d="M478.016 110.976a364.992 364.992 0 0 1 281.984 596.8l147.84 148.16a8 8 0 0 1 0 11.264l-39.68 39.552a8 8 0 0 1-11.264 0l-147.904-148.16a364.992 364.992 0 1 1-231.04-647.68z m0 72a292.992 292.992 0 1 0 0 586.048 292.992 292.992 0 0 0 0-586.048z" fill="#000000" p-id="13745"></path></svg>
+						</label>
+					</div>
+					<span class="search-addon search-icon"><i class="fa fa-search"></i></span>
+				</form>
+		</div><!-- .search-box -->
+		<div class="header">
+			<ul>
+				<li class="header-list" id="logo-all"><h2>BeFriends</h2><p id="logo-small">Make Friends Here</p></li>
+				<li class="header-list"><a href="index.html">HOME</a></li>
+				<li class="header-list"><p>FRIENDS</p></li>
+				<li class="header-list right-header-list" id="searchBtn">
+					<svg t="1608214591433" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="13744" width="16" height="16"><path d="M478.016 110.976a364.992 364.992 0 0 1 281.984 596.8l147.84 148.16a8 8 0 0 1 0 11.264l-39.68 39.552a8 8 0 0 1-11.264 0l-147.904-148.16a364.992 364.992 0 1 1-231.04-647.68z m0 72a292.992 292.992 0 1 0 0 586.048 292.992 292.992 0 0 0 0-586.048z" fill="#000000" p-id="13745"></path></svg>
+				</li>
+				<li class="header-list btn-list-group">
+					<svg t="1608214303309" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="12611" width="16" height="16"><path d="M44.4 245.9h935.2c24.4 0 44.4-20 44.4-44.4s-19.8-44.4-44.4-44.4H44.4C20 157.1 0 177.1 0 201.5s20 44.4 44.4 44.4z m935.2 221.8H44.4C20 467.7 0 487.7 0 512.1s20 44.4 44.4 44.4h935.2c24.4 0 44.4-20 44.4-44.4s-20-44.4-44.4-44.4z m0 310.4H44.4C20 778.1 0 797.8 0 822.5s20 44.4 44.4 44.4h935.2c24.4 0 44.4-19.8 44.4-44.4s-20-44.4-44.4-44.4z" p-id="12612" fill="#070700"></path></svg>
+
+					 <span class="btn-list-area">
+    					<a class="btn" id="userinfo-btn"  href="#">个人信息</a>
+						 <a class="btn" id="IdCard-btn"  href="#">身份认证</a>
+    					<a class="btn" id="login-btn">登录</a>
+    					<a class="btn" id="quit-btn">退出</a>
+						 <a class="btn" id="delete-btn">注销</a>
+  					</span>
+				</li>
+			</ul>
+		</div>
+
+		<!--分页表单-->
+		<div class="pageInfo">
+			<div class="card" id="card-1">
+				<div class="additional">
+					<div class="user-card">
+						<div class="level center" id="username1-a">
+							测试用户
+						</div>
+						<img src="用户头像/wu.png" class="img-circle" id="userPic1">
+					</div>
+					<div class="more-info">
+						<h1 id="username1-b">Jane Doe</h1>
+						<div class="coords">
+							<span>True Name:</span>
+							<span id="truename1">Null</span>
+						</div>
+						<div class="coords">
+							<span>Phone Number:</span>
+							<span id="phoneNumber1">Null</span>
+						</div>
+						<div class="coords">
+							<span>Email:</span>
+							<span id="email1">Null</span>
+						</div>
+						<div class="coords">
+							<span>Adderss:</span>
+							<span id="address1">Null</span>
+						</div>
+					</div>
+				</div>
+				<div class="general">
+					<h1 id="username1-c">Jane Doe</h1>
+					<p id="introduce1">Null.</p>
+					<span class="more">Mouse over the card for more info</span>
+				</div>
+			</div>
+
+			<div class="card green" id="card-2">
+				<div class="additional">
+					<div class="user-card">
+						<div class="level center" id="username2-a">
+							Level 13
+						</div>
+						<img src="用户头像/wu.png" class="img-circle" id="userPic2">
+					</div>
+					<div class="more-info">
+						<h1 id="username2-b">Jane Doe</h1>
+						<div class="coords">
+							<span>True Name:</span>
+							<span id="truename2">Null</span>
+						</div>
+						<div class="coords">
+							<span>Phone Number:</span>
+							<span id="phoneNumber2">Null</span>
+						</div>
+						<div class="coords">
+							<span>Email:</span>
+							<span id="email2">Null</span>
+						</div>
+						<div class="coords">
+							<span>Adderss:</span>
+							<span id="address2">Null</span>
+						</div>
+					</div>
+				</div>
+				<div class="general">
+					<h1 id="username2-c">Jane Doe</h1>
+					<p id="introduce2"> at molestie lacus. Nam vestibulum sodales odio ut pulvinar.</p>
+					<span class="more">Mouse over the card for more info</span>
+				</div>
+			</div>
+
+			<div class="card green" id="card-3">
+				<div class="additional">
+					<div class="user-card">
+						<div class="level center" id="username3-a">
+							Level 13
+						</div>
+						<img src="用户头像/wu.png" class="img-circle" id="userPic3">
+					</div>
+					<div class="more-info">
+						<h1 id="username3-b">Jane Doe</h1>
+						<div class="coords">
+							<span>True Name:</span>
+							<span id="truename3">Null</span>
+						</div>
+						<div class="coords">
+							<span>Phone Number:</span>
+							<span id="phoneNumber3">Null</span>
+						</div>
+						<div class="coords">
+							<span>Email:</span>
+							<span id="email3">Null</span>
+						</div>
+						<div class="coords">
+							<span>Adderss:</span>
+							<span id="address3">Null</span>
+						</div>
+					</div>
+				</div>
+				<div class="general">
+					<h1 id="username3-c">Jane Doe</h1>
+					<p id="introduce3"> at molestie lacus. Nam vestibulum sodales odio ut pulvinar.</p>
+					<span class="more">Mouse over the card for more info</span>
+				</div>
+			</div>
+
+			<div class="card" id="card-4">
+				<div class="additional">
+					<div class="user-card">
+						<div class="level center" id="username4-a">
+							Level 13
+						</div>
+						<img src="用户头像/wu.png" class="img-circle" id="userPic4">
+					</div>
+					<div class="more-info">
+						<h1 id="username4-b">Jane Doe</h1>
+						<div class="coords">
+							<span>True Name:</span>
+							<span id="truename4">Null</span>
+						</div>
+						<div class="coords">
+							<span>Phone Number:</span>
+							<span id="phoneNumber4">Null</span>
+						</div>
+						<div class="coords">
+							<span>Email:</span>
+							<span id="email4">Null</span>
+						</div>
+						<div class="coords">
+							<span>Adderss:</span>
+							<span id="address4">Null</span>
+						</div>
+					</div>
+				</div>
+				<div class="general">
+					<h1 id="username4-c">Jane Doe</h1>
+					<p id="introduce4"> at molestie lacus. Nam vestibulum sodales odio ut pulvinar.</p>
+					<span class="more">Mouse over the card for more info</span>
+				</div>
+
+		</div>
+
+
+		</div>
+		<!--分页导航-->
+		<div class="pagebtn">
+			<ul class="pagination">
+				<li><a href="#" id="pageLast">«</a></li>
+				<li><a class="active" href="#" id="page1" onclick="pageClick(1)">1</a></li>
+				<li><a  href="#" id="page2" onclick="pageClick(2)">2</a></li>
+				<li><a href="#" id="page3" onclick="pageClick(3)">3</a></li>
+				<li><a href="#" id="page4" onclick="pageClick(4)">4</a></li>
+				<li><a href="#" id="page5" onclick="pageClick(5)">5</a></li>
+				<li><a href="#" id="page6" onclick="pageClick(6)">6</a></li>
+				<li><a href="#" id="page7" onclick="pageClick(7)">7</a></li>
+				<li><a href="#" id="pageNext">»</a></li>
+			</ul>
+		</div>
+	</div>
+	<br><br>
+
+	<div id="mengban">
+	<div id="userinfo">
+
+		
+		<form action="" method="post" class="basic-grey" id="userinfo-form">
+ 				<span class="close">&times;</span>
+                 <h1>Your Info
+                     <span>You can change your info.</span>
+                 </h1>
+                 <label>
+                 	<input type="file" name="pic_file" id="UploadPic" class="img-rounded">
+                 	<img src="images/头像.png" id="UploadPicImg">
+                 </label>
+                 <label > 
+                 	<span style="margin-top: 2px;">UserName :</span>
+                 	<p id="userinfo-username" >Hello world1111111111111111111111</p>
+                 	<input type="hidden" />
+                 </label>
+
+                 <label>
+                    <span>Address :</span>
+                 	<input id="userinfo-address" type="text" name="Address" value="Enter your address" />
+                 </label>
+ 
+                 <label>
+                    <span>Email :</span>
+                 	<input id="userinfo-email" type="email" name="Email" value="Valid Email Address" />
+                 </label>
+
+                 <label>
+                    <span>PhoneNumber :</span>
+                    <input id="userinfo-phonenumber" type="text" name="PhoneNumber" value="Enter your PhoneNumber" />
+                 </label>
+
+                 <label>
+                    <span>Truename :</span>
+                 	<input id="userinfo-truename" type="text" name="Truename" value="Enter your truename" />
+                 </label>
+
+                 <label>
+                    <span>Introduce :</span>
+                 	<textarea id="userinfo-introduce" name="Introduce" placeholder="Introduce yourself"></textarea>
+                 </label>
+
+                 <label>
+                    <span>Password :</span>
+                 	<input id="userinfo-password" type="password" name="Password" placeholder="Reset your password" />
+                 </label>
+                 <label>
+                    <span>&nbsp;</span>
+                    <input type="button" class="button" value="Submit" id="userinfo-submit" />
+                 </label>
+ 
+         </form>
+	</div>
+	</div>
+
+	<div id="background-IdCard">
+		<div id="IdCard"><span class="closeI">&times;</span>
+			<h1>Identity Verification
+				<br>
+				<span>Please upload your IdCard.</span>
+			</h1>
+			<br><br>
+			<label>
+				<form id="IdCardForm" onsubmit="return false;">
+
+					<input type="file" name="IdCardPic" id="IdCardUp" style="display: none;">
+					<img src="images/Id.png" id="IdCardUpImg">
+					<br><br>
+					<input type="button" id="IdCardUpBtn" value="认证">
+				</form>
+			</label>
+
+			<label>
+
+			</label>
+
+		</div>
+	</div>
+
+	<script type="text/javascript" src="js/userinfo.js">
+    </script>
+	<script type="text/javascript" src="js/IdCard.js">
+	</script>
+</body>
+
+</html>

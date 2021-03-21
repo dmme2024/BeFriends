@@ -1,0 +1,653 @@
+/* Reset */
+*,
+*:after,
+*:before {
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+body{
+	font-weight: 500;
+	font-size: 1.05em;
+}
+.container{
+    min-width: 1200px;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.header{
+	border-bottom:1px solid #D5D5D5;
+	min-width: 1380px;
+
+}
+ul{
+	list-style-type: none;
+	margin-left: 68px;
+	margin-bottom: -27px;
+	margin-top: -30px;
+	
+	
+}
+li{
+	display: inline-block;
+    line-height: 40px;
+    margin-left: 20px;
+    margin-bottom:10px; 
+}
+h2{
+	padding: 0px;
+	margin-bottom: -5px;
+	font-weight:bold;
+}
+#logo-small{
+	padding: 0;
+	margin-top: -20px;
+}
+#logo-all{
+	margin-bottom: 10px;
+	padding: 0px;
+}
+
+.right-header-list{
+	margin-left: 880px;
+}
+.btn-list-area {
+    display: none;
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin-top: -16px;
+    margin-left: 1360px;
+    z-index: 20;
+}
+.btn-list-group:hover .btn-list-area {
+  display: block; 
+}
+.btn {
+	min-width: 70px;
+	width: 70px;
+    display: block;
+    padding: 0;
+    font-size: 16px;
+    color: #6c757d;
+    text-align: center;
+    line-height: 1.5;
+    background-color: #fff;
+    border: 1px solid #e9ecef;
+    cursor: pointer;
+    outline: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+a{
+	font-weight:bold;
+}
+
+
+
+
+/*个人信息表单*/
+
+#mengban{
+	display: none; /* 默认隐藏 */
+    position: fixed; 
+    z-index: 5;
+    padding-top: 100px; 
+    left: 0;
+    top: 0;
+    width: 100%; 
+    height: 100%; 
+    overflow: auto; 
+    /*background-color: rgb(0,0,0); */
+    background-color: rgba(0,0,0,0.4);
+    /*background: white;*/
+}
+/*隐藏*/
+#userinfo{
+	/*display: none; /* 默认隐藏 */
+    position: fixed; 
+
+    padding-top: 100px; 
+    left: 0;
+    top: 0;
+    width: 100%; 
+    height: 100%; 
+    overflow: auto;
+    -webkit-animation-name: animatetop;
+    -webkit-animation-duration: 0.4s;
+    animation-name: animatetop;
+    animation-duration: 0.4s
+}
+
+
+.basic-grey {
+    margin-left:auto;
+    margin-right:auto;
+    max-width: 500px;
+    background: #F7F7F7;
+    padding: 25px 15px 25px 10px;
+ 	font: 12px Georgia, "Times New Roman", Times, serif;
+ 	color: #888;
+    text-shadow: 1px 1px 1px #FFF;
+ 	border:1px solid #E4E4E4;
+ 
+}
+ 
+#UploadPic{
+	display: none;
+}
+#UploadPicImg{
+	margin: 0 auto;
+	padding: 18px;
+	margin-left: 200px;
+    width: 80px;
+    height: 80px;
+}
+
+.basic-grey h1 {
+    font-size: 25px;
+    padding: 0px 0px 10px 40px;
+    display: block;
+    border-bottom:1px solid #E4E4E4;
+    margin: -10px -15px 30px -10px;;
+    color: #888;
+ 
+}
+ 
+.basic-grey h1>span {
+ 
+    display: block;
+    font-size: 11px;
+ 
+}
+.basic-grey label {
+ 
+    display: block;
+    margin: 0px;
+ 
+}
+ 
+.basic-grey label>span {
+ 
+         float: left;
+ 
+         width: 20%;
+ 
+         text-align: right;
+ 
+         padding-right: 10px;
+ 
+         margin-top: 10px;
+ 
+         color: #888;
+ 
+}
+ 
+.basic-grey input[type="text"], .basic-grey input[type="email"], .basic-grey textarea, .basic-grey select , .basic-grey textarea, .basic-grey input[type="password"]{
+ 
+         border: 1px solid #DADADA;
+ 
+         color: #888;
+ 
+         height: 30px;
+ 
+         margin-bottom: 16px;
+ 
+         margin-right: 6px;
+ 
+         margin-top: 2px;
+ 
+         outline: 0 none;
+ 
+         padding: 3px 3px 3px 5px;
+ 
+         width: 70%;
+ 
+         font-size: 12px;
+ 
+         line-height:15px;
+ 
+         box-shadow: inset 0px 1px 4px #ECECEC;
+ 
+         -moz-box-shadow: inset 0px 1px 4px #ECECEC;
+ 
+         -webkit-box-shadow: inset 0px 1px 4px #ECECEC;
+ 
+}
+
+
+.basic-grey textarea{
+    padding: 5px 3px 3px 5px;
+ 	height: 100px;
+}
+
+
+.basic-grey p{
+	color: #888;
+    height: 30px;
+    margin-bottom: 5px;
+    margin-right: 8px;
+    /*margin-top: 2px;*/
+    outline: 0 none;
+    padding: 3px 3px 3px 5px;
+    /*width: 70%;*/
+    font-size: 12px;
+    /*line-height:15px;*/
+}
+
+.basic-grey .button {
+ 
+         background: #E27575;
+         border: none;
+         padding: 10px 25px 10px 25px;
+         color: #FFF;
+         box-shadow: 1px 1px 5px #B6B6B6;
+         border-radius: 3px;
+         text-shadow: 1px 1px 1px #9E3F3F;
+         cursor: pointer;
+}
+.basic-grey .button:hover {
+         background: #CF7A7A
+}
+
+/* 关闭按钮 */
+.close {
+    color: #B20000;
+    float: right;
+    margin-right: -4px;
+    margin-top: -18px;
+    font-size: 28px;
+    padding: 0px;
+    font-weight: bold;
+    position: relative;
+}
+
+.close:hover,
+.close:focus{
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* 添加动画 */
+@-webkit-keyframes animatetop {
+    from {top:-300px; opacity:0} 
+    to {top:0; opacity:1}
+}
+
+@keyframes animatetop {
+    from {top:-300px; opacity:0}
+    to {top:0; opacity:1}
+}
+
+
+/*分页导航样式*/
+.pagebtn{
+    text-align: center;
+    margin-left: 150px;
+}
+ul.pagination {
+    display: inline-block;
+    padding: 0;
+    margin: 0;
+}
+
+ul.pagination li {display: inline;}
+
+ul.pagination li a {
+    color: black;
+    float: left;
+    padding: 8px 16px;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+ul.pagination li a.active {
+    background-color: #4CAF50;
+    color: white;
+    border-radius: 5px;
+}
+
+ul.pagination li a:hover:not(.active) {background-color: #ddd;}
+
+/*每个分页信息样式*/
+.pageInfo{
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 1px;
+
+}
+
+.center {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+}
+
+.card {
+    width: 450px;
+    height: 250px;
+    background-color: #fff;
+    background: linear-gradient(#f8f8f8, #fff);
+    box-shadow: 0 8px 16px -8px rgba(0,0,0,0.4);
+    border-radius: 6px;
+    overflow: hidden;
+    position: relative;
+    margin: 1.5rem;
+    margin-left: 200px;
+    display: none;
+}
+
+.card h1 {
+    text-align: center;
+}
+
+.card .additional {
+    position: absolute;
+    width: 150px;
+    height: 100%;
+    background: linear-gradient(#dE685E, #EE786E);
+    transition: width 0.4s;
+    overflow: hidden;
+    z-index: 2;
+}
+
+.card.green .additional {
+    background: linear-gradient(#92bCa6, #A2CCB6);
+}
+
+
+.card:hover .additional {
+    width: 100%;
+    border-radius: 0 5px 5px 0;
+}
+
+.card .additional .user-card {
+    width: 150px;
+    height: 100%;
+    position: relative;
+    float: left;
+}
+
+.card .additional .user-card::after {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 10%;
+    right: -2px;
+    height: 80%;
+    border-left: 2px solid rgba(0,0,0,0.025);
+}
+
+.card .additional .user-card .level,
+.card .additional .user-card .points {
+    top: 15%;
+    color: #fff;
+    text-transform: uppercase;
+    font-size: 0.75em;
+    font-weight: bold;
+    background: rgba(0,0,0,0.15);
+    padding: 0.125rem 0.75rem;
+    border-radius: 100px;
+    white-space: nowrap;
+}
+
+.card .additional .user-card .points {
+    top: 85%;
+}
+
+.card .additional .user-card svg {
+    top: 50%;
+}
+
+.card .additional .more-info {
+    width: 300px;
+    float: left;
+    position: absolute;
+    left: 150px;
+    height: 100%;
+}
+
+.card .additional .more-info h1 {
+    color: #fff;
+    margin-bottom: 0;
+}
+
+.card.green .additional .more-info h1 {
+    color: #224C36;
+}
+
+.card .additional .coords {
+    margin: 0 1rem;
+    color: #fff;
+    font-size: 1rem;
+}
+
+.card.green .additional .coords {
+    color: #325C46;
+}
+
+.card .additional .coords span + span {
+    float: right;
+}
+.coords{
+    padding: 8px;
+}
+.card .additional .stats {
+    font-size: 2rem;
+    display: flex;
+    position: absolute;
+    bottom: 1rem;
+    left: 1rem;
+    right: 1rem;
+    top: auto;
+    color: #fff;
+}
+
+.card.green .additional .stats {
+    color: #325C46;
+}
+
+.card .additional .stats > div {
+    flex: 1;
+    text-align: center;
+}
+
+.card .additional .stats i {
+    display: block;
+}
+
+.card .additional .stats div.title {
+    font-size: 0.75rem;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.card .additional .stats div.value {
+    font-size: 1.5rem;
+    font-weight: bold;
+    line-height: 1.5rem;
+}
+
+.card .additional .stats div.value.infinity {
+    font-size: 2.5rem;
+}
+
+.card .general {
+    width: 300px;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 1;
+    box-sizing: border-box;
+    padding: 1rem;
+    padding-top: 0;
+}
+
+.card .general .more {
+    position: absolute;
+    bottom: 1rem;
+    right: 1rem;
+    font-size: 0.9em;
+}
+.user-touxiang{
+    width: 160px;
+    height: 250px;
+}
+.img-circle{
+    width: 100px;
+    height: 100px;
+
+    border-radius:100px;
+    margin-left: 26px;
+    margin-top: 100px;
+}
+
+/*搜索框*/
+.search-box {
+    display: none;
+    padding: 8px;
+    padding-bottom: 15px;
+    display: none;
+    border-radius: 4px;
+    overflow: hidden;
+    background-color: #f6f6f6;
+    width: 1200px;
+    margin-left: 150px;
+}
+.search-box input.form-control {
+    border: 0;
+    box-shadow: 0px 0px 0px;
+    color: #222;
+    background-color: transparent;
+}
+.search-box .search-input {
+    float: left;
+    width: calc( 100% - 108px );
+}
+.search-box .search-addon {
+    padding: 12px 20px;
+    float: left;
+    color: #222;
+    background-color: transparent;
+}
+.search-box .search-addon.close-search {
+    cursor: pointer;
+}
+#searchIn{
+    min-width: 750px;
+    height: 30px;
+    margin-left: 150px;
+}
+
+/*身份证弹窗*/
+#background-IdCard{
+    display: none; /* 默认隐藏 */
+    position: fixed;
+    z-index: 5;
+    padding-top: 100px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.4);
+
+    -webkit-animation-name: animatetop;
+    -webkit-animation-duration: 0.4s;
+    animation-name: animatetop;
+    animation-duration: 0.4s;
+}
+/* 关闭按钮 */
+.closeI {
+    color: #B20000;
+    float: right;
+    font-size: 30px;
+    padding: 0px;
+    margin-left: -20px;
+    font-weight: bold;
+    position: relative;
+}
+
+.closeI:hover,
+.closeI:focus{
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+#IdCard{
+    width: 600px;
+    height: 400px;
+    border-radius: 15px;
+    margin-left:auto;
+    margin-right:auto;
+    max-width: 600px;
+    background: #F7F7F7;
+    padding: 25px 15px 25px 10px;
+    font: 12px Georgia, "Times New Roman", Times, serif;
+    color: #888;
+    text-shadow: 1px 1px 1px #FFF;
+    border:1px solid #E4E4E4;
+    -webkit-animation-name: animatetop;
+    -webkit-animation-duration: 0.4s;
+    animation-name: animatetop;
+    animation-duration: 0.4s;
+}
+#IdCard span{
+    color: #808080;
+    font-size: 15px;
+    padding: 0;
+    margin-bottom: -500px;
+}
+#IdCard h1{
+    padding: 0;
+    margin-top: -25px;
+}
+#IdCard img{
+    margin-left: 150px;
+}
+
+#IdCardUpBtn {
+
+    box-shadow: 3px 3px 3px -1px #899599;
+    background:linear-gradient(to bottom, #ededed 5%, #bab1ba 100%);
+    background-color:#ededed;
+    border-radius:12px;
+    border:1px solid #d6bcd6;
+    display:inline-block;
+    cursor:pointer;
+    color:#3a8a9e;
+    font-family:Arial;
+    font-size:16px;
+    padding:9px 33px;
+    text-decoration:none;
+    text-shadow:0px -1px 1px #e1e2ed;
+    margin-left: 180px;
+    size: 15px;
+}
+#IdCardUpBtn:hover {
+    background:linear-gradient(to bottom, #bab1ba 5%, #ededed 100%);
+    background-color:#bab1ba;
+}
+#IdCardUpBtn:active {
+    position:relative;
+    top:1px;
+}
+/* 添加动画 */
+@-webkit-keyframes animatetop {
+    from {top:-300px; opacity:0}
+    to {top:0; opacity:1}
+}
+
+@keyframes animatetop {
+    from {top:-300px; opacity:0}
+    to {top:0; opacity:1}
+}
+

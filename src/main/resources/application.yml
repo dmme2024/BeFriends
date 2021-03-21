@@ -1,0 +1,26 @@
+server:
+  port: 8011
+  servlet:
+    context-path: /user
+spring:
+  datasource:
+    name: test
+    url: jdbc:mysql://127.0.0.1:3306/tb_user?characterEncoding=UTF-8&useUnicode=true&useSSL=false&tinyInt1isBit=false&serverTimezone=Asia/Shanghai&allowPublicKeyRetrieval=true
+    username: root
+    password: 844142024
+    driver-class-name: com.mysql.cj.jdbc.Driver
+
+  jpa:
+    database: MYSQL
+    show-sql: true
+    open-in-view: true
+    properties:
+      hibernate:
+        enable_lazy_load_no_trans: true
+        dialect: org.hibernate.dialect.MySQL5Dialect
+        ddl-auto: update
+
+mybatis-plus:
+  mapper-locations: classpath*:com/example/**/mapper/xml/*Mapper.xml
+  configuration:
+    map-underscore-to-camel-case: false
